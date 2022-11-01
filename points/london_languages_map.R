@@ -5,7 +5,9 @@ library(dplyr)
 library(broom)
 library(ggfx)
 library(ggtext)
-
+library(stringr)
+library(tidyr)
+library(purrr)
 
 # title font
 sysfonts::font_add_google("Saira Condensed","Saira Condensed", regular.wt = 800, bold.wt=900)
@@ -14,17 +16,17 @@ sysfonts::font_add_google("Saira Condensed","Saira Condensed", regular.wt = 800,
 sysfonts::font_add_google("Roboto Condensed","Roboto Condensed")
 
 # font awesome for caption
-sysfonts::font_add(family = "Font Awesome 5 Brands Regular", regular= "~/GitHub/DataViz/30 day map challenge 2022/fonts/Font Awesome 5 Brands-Regular-400.otf")
-sysfonts::font_add(family = "Font Awesome 5 Free Solid", regular = "~/GitHub/DataViz/30 day map challenge 2022/fonts/Font Awesome 5 Free-Solid-900.otf")
+sysfonts::font_add(family = "Font Awesome 5 Brands Regular", regular= "~/GitHub/30 day map challenge 2022/fonts/Font Awesome 5 Brands-Regular-400.otf")
+sysfonts::font_add(family = "Font Awesome 5 Free Solid", regular = "~/GitHub/30 day map challenge 2022/fonts/Font Awesome 5 Free-Solid-900.otf")
 showtext::showtext_auto()
 
 
 # shapefile for london using OA (finest) output
-london_shapefile<-readOGR("~/GitHub/DataViz/30 day map challenge 2022/points/statistical-gis-boundaries-london/ESRI/OA_2011_London_gen_MHW.shp") %>%
+london_shapefile<-readOGR("~/GitHub/30 day map challenge 2022/points/statistical-gis-boundaries-london/ESRI/OA_2011_London_gen_MHW.shp") %>%
 spTransform(CRS("+proj=longlat +datum=WGS84"))
 
 # london borough shapefile (for outline)
-london_borough<-readOGR("~/GitHub/DataViz/30 day map challenge 2022/points/statistical-gis-boundaries-london/ESRI/London_Borough_Excluding_MHW.shp") %>%
+london_borough<-readOGR("~/GitHub/30 day map challenge 2022/points/statistical-gis-boundaries-london/ESRI/London_Borough_Excluding_MHW.shp") %>%
   spTransform(CRS("+proj=longlat +datum=WGS84")) 
 
 # condense london borough shapefile to london area total 
@@ -34,10 +36,10 @@ london_total_tidy<-broom::tidy(london_total)
 
 # languages data from UK census
 
-languages<-readr::read_csv("~/GitHub/DataViz/30 day map challenge 2022/points/bulk (1).csv")
+languages<-readr::read_csv("~/GitHub/30 day map challenge 2022/points/bulk (1).csv")
 
 # language by borough, region, local authority (to select top 10 languages)
-languages_borough<-readxl::read_xlsx("~/GitHub/DataViz/30 day map challenge 2022/points/main-language-spoken-borough-census.xlsx", sheet=2)
+languages_borough<-readxl::read_xlsx("~/GitHub/30 day map challenge 2022/points/main-language-spoken-borough-census.xlsx", sheet=2)
 
 colnames(languages_borough)[1]<-"main languages"
 
@@ -87,14 +89,14 @@ pal<-c("#ca7b3e",
        "#d46a62")
 
 # create plot 
-ragg::agg_png(filename = "languages.png", width=25, height=24.5, units="in", res=300)               
+ragg::agg_png(filename = "languages_test.png", width=25, height=24.5, units="in", res=300)               
 language_map<-ggplot()+ 
   with_outer_glow(geom_polygon(data = london_total_tidy, aes(x=long,y=lat), fill="#141414", color="#B2B2B2"), colour="#ECECEC", sigma=20)+
   geom_point(data = points_on_map, aes(x = x, y=y, color=Language), size=.02)+
   scale_color_manual(values = pal)+
   labs(title = "Languages of London",
        subtitle = "Top 10 main languages spoken by persons aged 3 and above in London, United Kingdom, after English. Each dot on the map represents <b>5 people</b> per <b>London Output Area</b>, the smallest census geographic unit.",
-       caption= "<b><span style='font-family:\"Font Awesome 5 Free Solid\"'>&#xf279;</span> #30DayMapChallenge</b><br><b>Source:</b> 2011 Census Population and Household Estimates for England and Wales, Office of National Statistics<br><b>Map made by:</b> Samia B <span style='font-family: \"Font Awesome 5 Brands Regular\"'>&#xf09b;</span> samiaab1990")+
+       caption= "<b><span style='font-family:\"Font Awesome 5 Free Solid\"'>&#xf279;</span> #30DayMapChallenge</b><br><b>Source:</b> 2011 Census Population and Household Estimates for England and Wales, Office of National Statistics. <br>Contains National Statistics and Ordinance Survey Data © Crown copyright and database right 2012<br><b>Map made by:</b> Samia B <span style='font-family: \"Font Awesome 5 Brands Regular\"'>&#xf09b;</span> samiaab1990")+
  guides(color = guide_legend(nrow=1,override.aes = list(size=12, colour="#B2B2B2", pch=21, fill=pal)))+
  theme(
  plot.title = element_text(size=500, family="Saira Condensed", hjust=.5, color="#ECECEC", margin = margin(t=20, unit="pt")),
