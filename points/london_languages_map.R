@@ -96,7 +96,7 @@ language_map<-ggplot()+
   scale_color_manual(values = pal)+
   labs(title = "Languages of London",
        subtitle = "Top 10 main languages spoken by persons aged 3 and above in London, United Kingdom, after English. Each dot on the map represents <b>5 people</b> per <b>London Output Area</b>, the smallest census geographic unit.",
-       caption= "<b><span style='font-family:\"Font Awesome 5 Free Solid\"'>&#xf279;</span> #30DayMapChallenge</b><br><b>Source:</b> 2011 Census Population and Household Estimates for England and Wales, Office of National Statistics. <br>Contains National Statistics and Ordinance Survey Data © Crown copyright and database right 2012<br><b>Map made by:</b> Samia B <span style='font-family: \"Font Awesome 5 Brands Regular\"'>&#xf09b;</span> samiaab1990")+
+       caption= "<b><span style='font-family:\"Font Awesome 5 Free Solid\"'>&#xf279;</span> #30DayMapChallenge</b><br><b>Source:</b> 2011 Census Population and Household Estimates for England and Wales, Office of National Statistics. <br>Contains National Statistics and Ordnance Survey Data © Crown copyright and database right 2012<br><b>Map made by:</b> Samia B <span style='font-family: \"Font Awesome 5 Brands Regular\"'>&#xf09b;</span> samiaab1990")+
  guides(color = guide_legend(nrow=1,override.aes = list(size=12, colour="#B2B2B2", pch=21, fill=pal)))+
  theme(
  plot.title = element_text(size=500, family="Saira Condensed", hjust=.5, color="#ECECEC", margin = margin(t=20, unit="pt")),
