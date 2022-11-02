@@ -8,7 +8,7 @@ library(stringr)
 ## running for Netherlands 
 ## reads gpkg file (already downloaded osm.pbf)
 
-path = "C:/Users/samia/OneDrive/Documents/GitHub/DataViz/30 day map challenge 2022/lines/"
+path = "~/GitHub/30 day map challenge 2022/lines/"
 
 get_lines<-function(file)
 {
@@ -21,7 +21,7 @@ get_lines<-function(file)
   assign(str_remove_all(file,paste0(path,"|-latest.gpkg")), a, envir = .GlobalEnv)
 }
 
-list.files("~/GitHub/DataViz/30 day map challenge 2022/lines", full.names=TRUE) %>%
+list.files(path, full.names=TRUE) %>%
   str_subset(".latest.gpkg") %>%
   map(get_lines)
 

@@ -15,14 +15,14 @@ sysfonts::font_add_google("Teko","Teko")
 sysfonts::font_add_google("Encode Sans Condensed","Encode Sans Condensed")
 
 # font awesome for caption
-sysfonts::font_add(family = "Font Awesome 5 Brands Regular", regular= "~/GitHub/DataViz/30 day map challenge 2022/fonts/Font Awesome 5 Brands-Regular-400.otf")
-sysfonts::font_add(family = "Font Awesome 5 Free Solid", regular = "~/GitHub/DataViz/30 day map challenge 2022/fonts/Font Awesome 5 Free-Solid-900.otf")
+sysfonts::font_add(family = "Font Awesome 5 Brands Regular", regular= "~/GitHub/30 day map challenge 2022/fonts/Font Awesome 5 Brands-Regular-400.otf")
+sysfonts::font_add(family = "Font Awesome 5 Free Solid", regular = "~/GitHub/30 day map challenge 2022/fonts/Font Awesome 5 Free-Solid-900.otf")
 showtext::showtext_auto()
 showtext::showtext_opts(dpi = 300)
 
 
 ## shapefiles - used for testing and guidance in creating nl_line dataframe
-nl_shapefile<-st_read("~/GitHub/DataViz/30 day map challenge 2022/lines/Netherlands/NLD_adm1.shp") 
+nl_shapefile<-st_read("~/GitHub/30 day map challenge 2022/lines/Netherlands/NLD_adm1.shp") 
 nl_shapefile_agg<-st_combine(nl_shapefile) %>% st_make_valid() %>% st_union()
 
 ## this is for dividing by regions - ignore if not using 
@@ -44,7 +44,7 @@ title<-"Cycle Paths of Netherlands"
 
 title_no_space<-str_remove_all(title," ")
 
-pal_n<-pal(nchar(title)+1)
+pal_n<-pal(nchar(title_no_space)+1)
 
 make_title<-""
 
