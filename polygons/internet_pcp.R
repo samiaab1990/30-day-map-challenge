@@ -18,8 +18,8 @@ sysfonts::font_add_google("Playfair Display","Playfair Display", bold.wt=700)
 sysfonts::font_add_google("Ubuntu","Ubuntu")
 
 # font awesome for caption
-sysfonts::font_add(family = "Font Awesome 5 Brands Regular", regular= "~/GitHub/DataViz/30 day map challenge 2022/fonts/Font Awesome 5 Brands-Regular-400.otf")
-sysfonts::font_add(family = "Font Awesome 5 Free Solid", regular = "~/GitHub/DataViz/30 day map challenge 2022/fonts/Font Awesome 5 Free-Solid-900.otf")
+sysfonts::font_add(family = "Font Awesome 5 Brands Regular", regular= "~/GitHub/30 day map challenge 2022/fonts/Font Awesome 5 Brands-Regular-400.otf")
+sysfonts::font_add(family = "Font Awesome 5 Free Solid", regular = "~/GitHub/30 day map challenge 2022/fonts/Font Awesome 5 Free-Solid-900.otf")
 showtext::showtext_auto()
 showtext::showtext_opts(dpi = 300)
 
@@ -137,8 +137,8 @@ pull()
 
 comma_sep<-scales::label_comma()
 
-# Footnote 
-footnote = "Data on broadband access and primary care physicians per capita comes from The Federal Communications Commission and Robert Wood Johnson Foundation County \nHealth Rankings & Roadmap respectively. Broadband access was expressed as a percentage of population with broadband access and PCPs per capita were expressed as the \nnumber of primary care physicians per population for each county.'Low', 'medium' and 'high' levels were determined by whether the statistic for each county fell in \nthe lower, middle or upper third of all counties nationwide."
+#Footnote - did not include in w/o footnote version
+#footnote = "Data on broadband access and primary care physicians per capita comes from The Federal Communications Commission and Robert Wood Johnson Foundation County \nHealth Rankings & Roadmap respectively. Broadband access was expressed as a percentage of population with broadband access and PCPs per capita were expressed as the \nnumber of primary care physicians per population for each county.'Low', 'medium' and 'high' levels were determined by whether the statistic for each county fell in \nthe lower, middle or upper third of all counties nationwide."
 
 # main plot
 p<-ggplot()+
@@ -152,7 +152,7 @@ labs(title = "Broadband Internet Access and \nPrimary Care Availability",
 theme(
   plot.background = element_rect(fill = background_color, color=NA),
   plot.title = element_text(family="Playfair Display", size=110, color="#777777", hjust=.5, lineheight=.7, margin = margin(t=10)),
-  plot.subtitle = element_textbox(width = unit(.95,"npc"), color="#777777", family = "Ubuntu",size=28, hjust=.55,  margin = margin(t=35, b=30), lineheight=1),
+  plot.subtitle = element_textbox(width = unit(.9,"npc"), color="#777777", family = "Ubuntu",size=30, hjust=.55,  margin = margin(t=35, b=30), lineheight=1),
   plot.caption = element_textbox(color="#777777", hjust=.5, lineheight=.7, margin = margin(t=80)),
   panel.border = element_rect(color = background_color, fill=NA),
   panel.background = element_rect(fill = background_color, color=NA),
@@ -168,19 +168,19 @@ q<- ggplot()+
   annotate(geom = "segment", x=.3, y=.3, xend=1, yend=.3, color="#777777", size=1)+
   annotate(geom = "segment", x=.3, y=.3, xend=.3, yend=1, color="#777777", size=1)+
   annotate(geom = "segment", x=.3, y=.3, xend=.2, yend=.2, color="#777777", size=1)+
-  annotate(geom = "text", x = .2-.6, y = .2-.15, label = "Low broadband access\nLow PCP per capita", angle=315, color="#555555", size=6, family="Ubuntu", lineheight=.9, fontface="bold")+
+  annotate(geom = "text", x = .2-.5, y = .2-.5, label = "Low broadband access\nLow PCP per capita", angle=315, color="#555555", size=8, family="Ubuntu", lineheight=.9, fontface="bold")+
   annotate(geom = "segment", x=3, y=.3, xend=3.7, yend=.3, color="#777777", size=1)+
   annotate(geom = "segment", x=3.7, y=.3, xend=3.7, yend=1, color="#777777", size=1)+
   annotate(geom = "segment", x=3.7, y=.3, xend=3.8, yend=.2, color="#777777", size=1)+
-  annotate(geom = "text", x = 3.8+2, y = .2-2.3, label = "Low broadband access\nHigh PCP per capita", color="#555555", size=6, family="Ubuntu", lineheight=.9, angle=315, fontface="bold")+
+  annotate(geom = "text", x = 3.8+2.7, y = .2-2.1, label = "Low broadband access\nHigh PCP per capita", color="#555555", size=8, family="Ubuntu", lineheight=.9, angle=315, fontface="bold")+
   annotate(geom = "segment", x = .3, y=3, xend=.3, yend=3.7, color="#777777", size=1)+
   annotate(geom = "segment", x = .3, y=3.7, xend=1, yend=3.7, color="#777777", size=1)+
   annotate(geom = "segment", x = .3, y=3.7, xend=.2, yend=3.8, color="#777777", size=1)+
-  annotate(geom = "text", x = .2-2.4, y=3.7+2.2, label = "High broadband access\nLow PCP per capita", color="#555555", size=6, family="Ubuntu", lineheight=.9, angle=315, fontface="bold")+
+  annotate(geom = "text", x = .2-2, y=3.7+2.8, label = "High broadband access\nLow PCP per capita", color="#555555", size=8, family="Ubuntu", lineheight=.9, angle=315, fontface="bold")+
   annotate(geom = "segment", x = 3, y = 3.7, xend=3.7, yend=3.7, color="#777777", size=1)+
   annotate(geom = "segment", x = 3.7, y=3.7, xend = 3.7, yend = 3, color="#777777", size=1)+
   annotate(geom = "segment", x = 3.7, y=3.7, xend=3.8, yend=3.8, color="#777777", size=1)+
-  annotate(geom = "text", x = 3.8 +.5, y=3.8+.2, label = "High broadband access\nHigh PCP per capita", color="#555555", size=6, family="Ubuntu", lineheight=.9, angle=315, fontface="bold")+
+  annotate(geom = "text", x = 3.8 +.7, y=3.8+.3, label = "High broadband access\nHigh PCP per capita", color="#555555", size=8, family="Ubuntu", lineheight=.9, angle=315, fontface="bold")+
   scale_fill_identity()+
   coord_equal(clip="off")+
   theme(plot.background = element_blank(),
@@ -202,9 +202,9 @@ r<-ggdraw() +
   draw_plot(legend_plot, x = .5, y = -.05, width = .3, height = .3)
   
 # add footnote 
-r<-add_sub(plot = r, label=footnote, fontfamily="Ubuntu", size=20, color="#777777", vpadding = grid::unit(1,"lines"))
-r<-ggdraw(r) 
+#r<-add_sub(plot = r, label=footnote, fontfamily="Ubuntu", size=20, color="#777777", vpadding = grid::unit(1,"lines"))
+#r<-ggdraw(r) 
 
 # comment out-for testing only
-#ggsave(plot = inset, filename = "legend.png", width = 5, height = 5, units="in", dpi=300, ragg::agg_png, bg = background_color)
-ggsave(plot = r, filename = "broadband_internet_final_with_caption.png", width=26, height=21, units="in", dpi=300, device=ragg::agg_png, bg=background_color)
+ggsave(plot = legend_plot, filename = "legend.png", width = 5, height = 5, units="in", dpi=300, ragg::agg_png, bg = background_color)
+ggsave(plot = r, filename = "broadband_internet_final_with_caption_test.png", width=26, height=21, units="in", dpi=300, device=ragg::agg_png, bg=background_color)
