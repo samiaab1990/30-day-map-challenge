@@ -18,4 +18,4 @@ Contributions to the [30 day map challenge 2022](https://github.com/tjukanovt/30
 <img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/8def7ba5284e4397b05860ed65a4ab9875101962/network/nyc_subway.png' width='90%' height='90%'>
 
 ## Day 8: Open Street Maps
-<img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/61b1537a8b6b4dcb5c652323d495472c555e8082/openstreetmap/Dar%20es%20Salaam_prettymap.png' width='90%' height='90%'>
+<img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/9fb181433fddfd41a23f249a4be2159584a806f9/openstreetmap/Dar%20es%20Salaam_prettymap.png' width='90%' height='90%'>
