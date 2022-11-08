@@ -14,5 +14,8 @@ Contributions to the [30 day map challenge 2022](https://github.com/tjukanovt/30
 ## Day 4: Color Friday Green
 <img src ='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/0f9787672a648b196cf4ab06ca7d2e9341ff8398/color%20friday-green/sa_land_cover.png' width='90%' height='90%'>
 
-## Day 6: Subway
+## Day 6: Network
 <img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/8def7ba5284e4397b05860ed65a4ab9875101962/network/nyc_subway.png' width='90%' height='90%'>
+
+## Day 8: Open Street Maps
+<img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/61b1537a8b6b4dcb5c652323d495472c555e8082/openstreetmap/Dar%20es%20Salaam_prettymap.png' width='90%' height='90%'>
