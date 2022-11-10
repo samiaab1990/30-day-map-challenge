@@ -19,3 +19,6 @@ Contributions to the [30 day map challenge 2022](https://github.com/tjukanovt/30
 
 ## Day 8: Open Street Maps
 <img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/9fb181433fddfd41a23f249a4be2159584a806f9/openstreetmap/Dar%20es%20Salaam_prettymap.png' width='90%' height='90%'>
+
+## Day 9: Space
+<img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/efd10ce6e57b63878aa9121761718b90e4a09f15/space/space.png' width='90%' height='90%'>
