@@ -24,4 +24,4 @@ Contributions to the [30 day map challenge 2022](https://github.com/tjukanovt/30
 <img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/50b0fd0ad140796950844f28dea883f55dc3cf9f/space/space.png' width='90%' height='90%'>
 
 ## Day 10: A bad map
-<img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/e105a4665a30a539ee9641658ffa9245d49ad181/a%20bad%20map/a_bad_map_cropped.png' width='90%' height='90%'>
+<img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/cf3ab14d43f4241ffbacfb21430ef48451b26d3a/a%20bad%20map/a_bad_map_cropped2.png' width='90%' height='90%'>
