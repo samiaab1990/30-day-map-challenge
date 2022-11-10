@@ -22,3 +22,6 @@ Contributions to the [30 day map challenge 2022](https://github.com/tjukanovt/30
 
 ## Day 9: Space
 <img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/efd10ce6e57b63878aa9121761718b90e4a09f15/space/space.png' width='90%' height='90%'>
+
+## Day 10: A bad map
+<img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/2e6e06d5bd4ddd5b863d029e795e806d1cba5650/a%20bad%20map/a_bad_map.png' width='90%' height='90%'>
