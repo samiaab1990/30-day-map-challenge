@@ -21,7 +21,7 @@ Contributions to the [30 day map challenge 2022](https://github.com/tjukanovt/30
 <img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/9fb181433fddfd41a23f249a4be2159584a806f9/openstreetmap/Dar%20es%20Salaam_prettymap.png' width='90%' height='90%'>
 
 ## Day 9: Space
-<img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/efd10ce6e57b63878aa9121761718b90e4a09f15/space/space.png' width='90%' height='90%'>
+<img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/50b0fd0ad140796950844f28dea883f55dc3cf9f/space/space.png' width='90%' height='90%'>
 
 ## Day 10: A bad map
 <img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/2e6e06d5bd4ddd5b863d029e795e806d1cba5650/a%20bad%20map/a_bad_map.png' width='100%' height='100%'>
