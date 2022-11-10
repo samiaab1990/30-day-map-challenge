@@ -36,7 +36,7 @@ for(i in 1:length(zip_files))
   assign(name, st_read(file), envir=.GlobalEnv)
 }
 
-centroids<-list(IRL_adm0.shp, ISL_adm0.shp) %>%
+centroids<-list(IRL_adm0, ISL_adm0) %>%
 map(st_centroid) %>%
 bind_rows() %>%
 as_Spatial() %>%
@@ -79,14 +79,14 @@ g <- rasterGrob(c("#FF4E50","#F9D423"), width=unit(1,"npc"), height = unit(1,"np
 
 p<-ggplot()+
 annotation_custom(g, xmin=-Inf, xmax=Inf, ymin=-Inf,ymax=Inf)+
-geom_sf(data=IRL_adm0.shp, color=NA, fill="white")+
-geom_sf(data=ISL_adm0.shp, color=NA,fill="white")+
+geom_sf(data=IRL_adm0, color=NA, fill="white")+
+geom_sf(data=ISL_adm0, color=NA,fill="white")+
 geom_point(data = centroids, aes(x=x,y=y))+
 geom_segment(data = centroids, aes(x=ICELANDx,y=ICELANDy,xend=IRELANDx,yend=IRELANDy), linetype="dotted",size=.8, color="black")+
 geom_richtext(data = names_path,aes(x=x,y=y,label=names), fill="black", size=5, family="Roboto")+
 geom_textbox(aes(x=-23,y=61,label=paste0("Distance Between <b>",names[1],"</b> and <b>", names[length(names)],"</b>")), size=9,lineheight=.8, halign=.5, width=unit(.5,"npc"), box.color=NA, fill=NA, color="white",family="Roboto")+
 geom_textbox(aes(x=-22.9,y=60,label="The distance between Iceland and Ireland is <b>14 letters</b>."), width=unit(.4,"npc"), size=5, fill=NA, box.color=NA,family="Roboto")+
-geom_textbox(aes(x=-24.3,y=52,label="<b><span style='font-family:\"Font Awesome 5 Free Solid\"'>&#xf279;</span><span style='font-family:\"Roboto\"'> #30DayMapChallenge </span></b><br><b><span style='font-family:\"Roboto\"'>Source:</b> @TerribleMaps Twitter, Reddit<br><b>Map made by:</b> Samia B</span> <span style='font-family: \"Font Awesome 5 Brands Regular\"'>&#xf09b;</span><span style='font-family:\"Roboto\"'> samiaab1990</span>"), color="black", size=2.5, width=unit(.35,"npc"), fill=NA, box.color=NA)+
+geom_textbox(aes(x=-24.3,y=52,label="<b><span style='font-family:\"Font Awesome 5 Free Solid\"'>&#xf279;</span><span style='font-family:\"Roboto\"'> #30DayMapChallenge </span></b><br><b><span style='font-family:\"Roboto\"'>Source:</b> @UndeniablyAlex via Twitter <br>found on @TerribleMaps and Reddit<br><b>Map made by:</b> Samia B</span> <span style='font-family: \"Font Awesome 5 Brands Regular\"'>&#xf09b;</span><span style='font-family:\"Roboto\"'> samiaab1990</span>"), color="black", size=2.5, width=unit(.35,"npc"), fill=NA, box.color=NA)+
 theme(
   plot.background = element_blank(),
   panel.background = element_blank(),
@@ -95,4 +95,4 @@ theme(
   axis.title=element_blank(),
   axis.ticks=element_blank())+coord_sf(clip="off")
 
-ggsave(plot = p, filename = "a_bad_map.png", width=14, height=10, units="in", dpi=300, device=ragg::agg_png, bg="transparent")
+ggsave(plot = p, filename = "a_bad_map_test.png", width=14, height=10, units="in", dpi=300, device=ragg::agg_png, bg="transparent")
