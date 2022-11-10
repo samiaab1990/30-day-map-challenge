@@ -8,6 +8,7 @@ library(ggforce)
 library(broom)
 library(ggbump)
 library(ggtext)
+library(BBMisc)
 
 # not used 
 # title font

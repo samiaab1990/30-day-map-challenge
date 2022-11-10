@@ -92,7 +92,7 @@ theme(
   panel.background = element_blank(),
   panel.grid=element_blank(),
   axis.text=element_blank(),
-  axis.title = element_blank(),
+  axis.title=element_blank(),
   axis.ticks=element_blank())+coord_sf(clip="off")
 
 ggsave(plot = p, filename = "a_bad_map.png", width=14, height=10, units="in", dpi=300, device=ragg::agg_png, bg="transparent")
