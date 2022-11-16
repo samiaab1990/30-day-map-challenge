@@ -28,3 +28,6 @@ Contributions to the [30 day map challenge 2022](https://github.com/tjukanovt/30
 
 ## Day 14: Hexagons
 <img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/14ea4ebfa0614bc85368c6c50285550fcd039ce9/hexagons/cherry_blossom.png' width='90%' height='90%'>
+
+## Day 15: Food and Drink
+<img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/e35ac424048c14ae2fd414fc9c4934b3480a869d/food-drink/food_drink.png' width='90%' height='90%'>
