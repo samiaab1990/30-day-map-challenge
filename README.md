@@ -33,4 +33,4 @@ Contributions to the [30 day map challenge 2022](https://github.com/tjukanovt/30
 <img src='https://github.com/samiaab1990/30-day-map-challenge-2022/blob/10158632254e98789a59c0574130e43f246b471b/food-drink/food_drink_cropped.png' width='90%' height='90%'>
 
 ## Day 19: Globe
-<img src='https://github.com/samiaab1990/30-day-map-challenge/blob/bdd50f07bbc06db3b771e88ea575a0f3d4dd105f/globe/globe.gif' width='90%' height='90%'>
+<img src='https://github.com/samiaab1990/30-day-map-challenge/blob/53b9fe0efa81578096e4c7d4adb8ec4b474e2e58/globe/globe.gif' width='90%' height='90%'>
