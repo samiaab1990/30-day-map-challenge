@@ -153,7 +153,7 @@ return(q)
 
   # for loop to run animations-should generate total 361 images
   
-   for(i in -39:180)
+   for(i in -180:180)
    {
      # in the function, the for loop must continue even if an error happens along the way
      # the error is due to 'illegal geometries' in the orthographic projection at certain longs
