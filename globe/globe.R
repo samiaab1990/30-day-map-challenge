@@ -181,7 +181,7 @@ return(q)
   file.info() %>%
   tibble::rownames_to_column("filename") %>%
   filter(size!=10018) %>%
-  arrange(mtime) %>%
+  arrange(desc(mtime)) %>%
   pull(filename)
 
 # create gif
