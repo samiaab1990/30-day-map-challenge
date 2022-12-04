@@ -155,7 +155,7 @@ generate_peak_label<-function(mt_name, nudge_x=0, nudge_y=0,y_max=2, width_img=8
 
 # create caption
 caption<-ggplot()+
-  geom_richtext(aes(x=10,y=1,label="<b><span style='font-family:\"Font Awesome 5 Free Solid\"'>&#xf279;</span><span style='font-family:\"Lora\"'> #30DayMapChallenge. </span></b><b><span style='font-family:\"Lora\"'>Source:</b> rayshader(@tylermorganwall), elevatr(@jhollist), Wikipedia <b>Map made by:</b> Samia B</span> <span style='font-family: \"Font Awesome 5 Brands Regular\"'>&#xf09b;</span><span style='font-family:\"Lora\"'> samiaab1990</span>"), size=10, color="#818181", fill=NA, label.colour=NA)+
+  geom_richtext(aes(x=10,y=1,label="<b><span style='font-family:\"Font Awesome 5 Free Solid\"'>&#xf279;</span><span style='font-family:\"Lora\"'> #30DayMapChallenge. </span></b><b style='font-family:\"Lora\"'>Source:</b><span style='font-family:\"Lora\"'> rayshader(@tylermorganwall), elevatr(@jhollist), Wikipedia</span> <b style='font-family:\"Lora\"'>Map made by:</b><span style='font-family:\"Lora\"'> Samia B</span> <span style='font-family: \"Font Awesome 5 Brands Regular\"'>&#xf09b;</span><span style='font-family:\"Lora\"'> samiaab1990</span>"), size=10, color="#353535", fill=NA, label.colour=NA)+
   theme_void()
 
 ggsave(
