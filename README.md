@@ -34,3 +34,6 @@ Contributions to the [30 day map challenge 2022](https://github.com/tjukanovt/30
 
 ## Day 19: Globe
 <img src='https://github.com/samiaab1990/30-day-map-challenge/blob/53b9fe0efa81578096e4c7d4adb8ec4b474e2e58/globe/globe.gif' width='90%' height='90%'>
+
+## Day 28: 3d
+<img src='https://github.com/samiaab1990/30-day-map-challenge/blob/9b8edcb2f91f428a93e42397ad81034d35c8b102/3d/nepal_annotated.png' width='90%' height='90%'>
